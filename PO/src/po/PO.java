@@ -17,17 +17,21 @@ public class PO {
      */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        bandera = true;
+        boolean bandera = true;
+        int n = 0;
+        int suma = 0;
         while (bandera) {
             System.out.println("Ingrese un numero ");
-            int n = entrada.nextInt();
-            if (n > 0) {
-                n = +n;
-                
+            n = entrada.nextInt();
+            if (n >= 0) {
+                suma = n + n;
+
             } else {
                 System.out.println("este valor es negativo no se puede sumar");
-                
+                bandera = false;
             }
+
         }
+        System.out.println(suma);
     }
 }
